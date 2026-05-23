@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Kubernetes generated files
+*.secret.yaml
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# Terraform (if added later)
+.terraform/
+*.tfstate
+*.tfstate.backup

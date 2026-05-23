@@ -101,5 +101,3 @@ kubeseal -f secret.yaml -w sealedsecret.yaml
 - Focus kept on GitOps structure and secrets
 
 ---
-- Add monitoring with Prometheus/Grafana
-- Add External Secrets Operator integration

@@ -13,27 +13,28 @@ The application deployed is:
 
 # Project Structure
 
-```text
-k8s/
-├── base/
-│   ├── deployment.yaml
-│   ├── service.yaml
-│   ├── sealedsecret.yaml
-│   └── kustomization.yaml
-│
-└── overlays/
-    ├── staging/
-    │   ├── namespace.yaml
-    │   ├── replica-patch.yaml
-    │   ├── image-patch.yaml
+k8s-assessment/
+├── .gitignore
+├── README.md
+└── k8s/
+    ├── base/
+    │   ├── deployment.yaml
+    │   ├── service.yaml
+    │   ├── sealedsecret.yaml
     │   └── kustomization.yaml
     │
-    └── production/
-        ├── namespace.yaml
-        ├── replica-patch.yaml
-        ├── image-patch.yaml
-        └── kustomization.yaml
-```
+    └── overlays/
+        ├── staging/
+        │   ├── namespace.yaml
+        │   ├── replica-patch.yaml
+        │   ├── image-patch.yaml
+        │   └── kustomization.yaml
+        │
+        └── production/
+            ├── namespace.yaml
+            ├── replica-patch.yaml
+            ├── image-patch.yaml
+            └── kustomization.yaml
 
 ---
 
@@ -100,12 +101,5 @@ kubeseal -f secret.yaml -w sealedsecret.yaml
 - Focus kept on GitOps structure and secrets
 
 ---
-
-# Improvements With More Time
-
-- Add ArgoCD
-- Add HPA autoscaling
-- Add NetworkPolicies
-- Add CI/CD pipeline
 - Add monitoring with Prometheus/Grafana
 - Add External Secrets Operator integration
